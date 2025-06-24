@@ -1,12 +1,25 @@
-## 🐳 Universal Domain Adaptation Benchmark (Time Series) – Docker Environment
+## 🤖 Universal Domain Adaptation Benchmark for Time Series (UniDABench)
 
-This section describes how to use the pre-built Docker image to run the **Universal Domain Adaptation Benchmark for Time Series Data Representation** in a reproducible, GPU-enabled environment.
+**UniDABench** is a comprehensive benchmark suite designed for evaluating **Universal Domain Adaptation (UDA)** methods on **time series data**. Based on and extended from the [AdaTime](https://github.com/emadeldeen24/AdaTime) framework, this repository introduces a unified platform that implements and compares multiple state-of-the-art UDA algorithms across diverse datasets and scenarios.
+
+This benchmark accompanies the paper: 
+
+📄 *[Universal Domain Adaptation Benchmark for Time Series Data Representation](https://arxiv.org/abs/2505.17899)*  
+by Romain Mussard, Fannia Pacheco, Maxime Berar, Gilles Gasso, and Paul Honeine.
+
+It includes:
+- An adapted pipeline tailored for **time series UDA**
+- Support for six baseline UDA methods (UAN, OVANet, PPOT, DANCE, UniJDOT, and more)
+- Automated experiment execution and reproducibility via Docker
+- Tools for hyperparameter tuning and evaluation
+
+**UniDABench** aims to foster research and fair comparison in the growing field of time series domain adaptation.
 
 ---
 
 ## 📚 Acknowledgments
 
-This repository (`UniDABench`) is based on the original implementation of :octocat: [AdaTime](https://github.com/emadeldeen24/AdaTime). We sincerely thank the authors for their excellent work and publicly available implementation. 
+This repository (`UniDABench`) is based on the original implementation of [AdaTime](https://github.com/emadeldeen24/AdaTime). We sincerely thank the authors for their excellent work and publicly available implementation. 
 
 We adapted their code specifically to address the **Universal Domain Adaptation** (UDA) task for time series data, including significant modifications and extensions.
 
@@ -82,7 +95,7 @@ The provided Docker environment ensures consistent execution of benchmarks acros
 Ensure your system meets the following requirements:
 
 - **NVIDIA GPU**
-- **NVIDIA GPU driver** (version **≥ 515** recommended for CUDA 11.8)
+- **NVIDIA GPU driver** (version **≥ 515** recommended)
 - **Docker** ([Install Docker](https://docs.docker.com/get-docker/))
 - **NVIDIA Container Toolkit**
 

@@ -1,4 +1,4 @@
-## 🤖 Universal Domain Adaptation Benchmark for Time Series (UniDABench)
+## 🔬 Universal Domain Adaptation Benchmark for Time Series (UniDABench)
 
 **UniDABench** is a comprehensive benchmark suite designed for evaluating **Universal Domain Adaptation (UDA)** methods on **time series data**. Based on and extended from the [AdaTime](https://github.com/emadeldeen24/AdaTime) framework, this repository introduces a unified platform that implements and compares multiple state-of-the-art UDA algorithms across diverse datasets and scenarios.
 

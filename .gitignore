@@ -1,0 +1,14 @@
+
+.idea/
+
+algorithms/__pycache__/
+
+configs/__pycache__/
+
+*.pt
+
+trainers/__pycache__/
+
+models/__pycache__/
+
+dataloader/__pycache__/

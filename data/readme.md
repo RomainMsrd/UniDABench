@@ -1,0 +1,16 @@
+easydl==2.2.0
+faiss==1.7.4
+matplotlib==3.8.0
+numpy==2.3.1
+pandas==2.3.0
+POT==0.9.1
+s3cmd==2.4.0
+scikit_image==0.19.3
+scikit_learn==1.3.0
+scipy==1.16.0
+skorch==0.15.0
+timm==1.0.15
+torch==2.1.1
+torchmetrics==1.2.0
+torchvision==0.16.1
+tqdm==4.65.0

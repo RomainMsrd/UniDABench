@@ -8,7 +8,7 @@ This github accompanies the paper:
 
 It includes:
 - An adapted pipeline tailored for **time series UniDA**
-- Support for six baseline UniDA methods (UAN, OVANet, PPOT, DANCE, UniJDOT, and more)
+- Support for six baseline UniDA methods (UAN, OVANet, DANCE, PPOT, UniOT and UniJDOT)
 - Automated experiment execution and reproducibility via Docker
 - Tools for hyperparameter tuning and evaluation
 
@@ -27,14 +27,16 @@ Additionally, we implemented and included six baseline methods to benchmark UniD
 - **UAN** ([Universal Domain Adaptation](https://openaccess.thecvf.com/content_CVPR_2019/papers/You_Universal_Domain_Adaptation_CVPR_2019_paper.pdf))
 - **OVANet** ([OVANet: One-vs-All Network for Universal Domain Adaptation
 ](https://arxiv.org/abs/2104.03344))
-- **PPOT** ([Prototypical Partial Optimal Transport for Universal Domain Adaptation
-](https://arxiv.org/abs/2408.01089))
 - **DANCE** ([Universal Domain Adaptation through Self Supervision
 ](https://arxiv.org/abs/2002.07953))
+- **PPOT** ([Prototypical Partial Optimal Transport for Universal Domain Adaptation
+](https://arxiv.org/abs/2408.01089))
+- **UniOT** ([Unified Optimal Transport Framework
+for Universal Domain Adaptation](https://changwxx.github.io/UniOT-webpage/))
 - **UniJDOT** ([Deep Joint Distribution Optimal Transport for Universal Domain Adaptation on Time Series
 ](https://arxiv.org/abs/2503.11217))
 
-We acknowledge the authors of each baseline method for their valuable contributions to domain adaptation research.
+We acknowledge the authors of each baseline method for their valuable contributions to the field of domain adaptation research.
 
 ---
 
@@ -64,7 +66,7 @@ python main.py --dataset "HAR" --da_method "DANCE" --backbone "CNN" --num_runs 1
 ```
 
 This command runs the DANCE method on the HAR dataset using a CNN backbone for 10 repetitions.
-The current hyperparameters have been selected through a thorough hyperparameter search using [**Weight & Biases**](https://wandb.ai/site/) framwork.
+The current hyperparameters have been selected through a thorough hyperparameter search using the [**Weight & Biases**](https://wandb.ai/site/) framework.
 
 To perform a hyperparameter sweep to identify the optimal hyperparameters, you can use:
 
@@ -144,6 +146,7 @@ We recommend mounting this entire repository folder (`UniDABench`) directly into
 Run the container as follows:
 
 ```bash
+cd path/to/UniDABench
 docker run --gpus all -it --rm --shm-size=200g \
   -v $(pwd):/workspace/data \
   -v /path/to/tmp/dir:/workspace/tmp \
@@ -153,7 +156,7 @@ docker run --gpus all -it --rm --shm-size=200g \
 
 #### 🔧 Replace these paths:
 - `$(pwd)`: Automatically mounts the current directory (`UniDABench`) into the container.
-- `/path/to/tmp/dir`: Local directory for temporary files or cache.
+- `/path/to/tmp/dir`: Local directory for temporary files or cache. (you can create `tmp` a folder anywhere)
 
 Inside the container, these paths appear as:
 - `/workspace/data` → Your repository’s root (`UniDABench`)

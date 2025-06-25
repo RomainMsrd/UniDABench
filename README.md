@@ -1,15 +1,14 @@
 ## 🔬 Universal Domain Adaptation Benchmark for Time Series (UniDABench)
 
-**UniDABench** is a comprehensive benchmark suite designed for evaluating **Universal Domain Adaptation (UDA)** methods on **time series data**. Based on and extended from the [AdaTime](https://github.com/emadeldeen24/AdaTime) framework, this repository introduces a unified platform that implements and compares multiple state-of-the-art UDA algorithms across diverse datasets and scenarios.
+**UniDABench** is a comprehensive benchmark suite designed for evaluating **Universal Domain Adaptation (UniDA)** methods on **time series data**. Based on and extended from the [AdaTime](https://github.com/emadeldeen24/AdaTime) framework, this repository introduces a unified platform that implements and compares multiple state-of-the-art UDA algorithms across diverse datasets and scenarios.
 
-This benchmark accompanies the paper: 
+This github accompanies the paper: 
 
-📄 *[Universal Domain Adaptation Benchmark for Time Series Data Representation](https://arxiv.org/abs/2505.17899)*  
-by Romain Mussard, Fannia Pacheco, Maxime Berar, Gilles Gasso, and Paul Honeine.
+📄 *[Universal Domain Adaptation Benchmark for Time Series Data Representation](https://arxiv.org/abs/2505.17899)*, Romain Mussard, Fannia Pacheco, Maxime Berar, Gilles Gasso, and Paul Honeine.
 
 It includes:
-- An adapted pipeline tailored for **time series UDA**
-- Support for six baseline UDA methods (UAN, OVANet, PPOT, DANCE, UniJDOT, and more)
+- An adapted pipeline tailored for **time series UniDA**
+- Support for six baseline UniDA methods (UAN, OVANet, PPOT, DANCE, UniJDOT, and more)
 - Automated experiment execution and reproducibility via Docker
 - Tools for hyperparameter tuning and evaluation
 
@@ -21,9 +20,9 @@ It includes:
 
 This repository (`UniDABench`) is based on the original implementation of [AdaTime](https://github.com/emadeldeen24/AdaTime). We sincerely thank the authors for their excellent work and publicly available implementation. 
 
-We adapted their code specifically to address the **Universal Domain Adaptation** (UDA) task for time series data, including significant modifications and extensions.
+We adapted their code specifically to address the **Universal Domain Adaptation** (UniDA) task for time series data, including significant modifications and extensions.
 
-Additionally, we implemented and included six baseline methods to benchmark UDA performance:
+Additionally, we implemented and included six baseline methods to benchmark UniDA performance:
 
 - **UAN** ([Universal Domain Adaptation](https://openaccess.thecvf.com/content_CVPR_2019/papers/You_Universal_Domain_Adaptation_CVPR_2019_paper.pdf))
 - **OVANet** ([OVANet: One-vs-All Network for Universal Domain Adaptation
@@ -41,11 +40,11 @@ We acknowledge the authors of each baseline method for their valuable contributi
 
 ## 📁 Datasets and Running Experiments
 
-We use three datasets in our experiments. They can be downloaded directly from the following link:
+We use three datasets in our experiments. They can be downloaded from the [AdaTime](https://github.com/emadeldeen24/AdaTime) github or directly from the following link:
 
 ➡️ [Datasets for UniDABench](https://drive.google.com/file/d/1DcuNYsKyzKg_Vm7u-Lm2Y6BjDdV71QCJ/view?usp=sharing)
 
-After downloading and setting up the datasets, you can reproduce all experiments reported in our paper by simply executing:
+After downloading and setting up the datasets in the data folder, you can reproduce all experiments reported in our paper by simply executing:
 
 ```bash
 bash run.sh
@@ -85,8 +84,8 @@ The provided Docker environment ensures consistent execution of benchmarks acros
 ---
 ### 📦 Docker Image
 
-- **Image Name:** `mussarom/uda_ts_bench`  
-- **Base Image:** `nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu20.04`
+- **Image Name:** `mussarom/uda_ts_bench`
+- **Base Image:** `nvidia/cuda:12.4.0-base-ubuntu22.04`
 
 ---
 
@@ -137,29 +136,28 @@ docker build -t mussarom/uda_ts_bench .
 This will create the image `mussarom/uda_ts_bench` on your machine.
 
 
----
 
-### 🚀 Run the Docker Container
+### 🚀 Running the Docker Container (Recommended)
 
-Launch the container with GPU support, mounting local folders for your data and temporary workspace:
+We recommend mounting this entire repository folder (`UniDABench`) directly into `/workspace/data` inside the container. This setup enables immediate access to your local code, data, and scripts.
+
+Run the container as follows:
 
 ```bash
 docker run --gpus all -it --rm --shm-size=200g \
-  -v /path/to/your/data:/workspace/data \
+  -v $(pwd):/workspace/data \
   -v /path/to/tmp/dir:/workspace/tmp \
   -e TMPDIR=/workspace/tmp \
   mussarom/uda_ts_bench
 ```
 
 #### 🔧 Replace these paths:
+- `$(pwd)`: Automatically mounts the current directory (`UniDABench`) into the container.
+- `/path/to/tmp/dir`: Local directory for temporary files or cache.
 
-- `/path/to/your/data`: Local path containing your project or dataset.
-- `/path/to/tmp/dir`: Local path for temporary files or cache.
-
-Inside the container, these paths are available as:
-
-- `/workspace/data`
-- `/workspace/tmp`
+Inside the container, these paths appear as:
+- `/workspace/data` → Your repository’s root (`UniDABench`)
+- `/workspace/tmp` → Your temporary workspace
 
 ---
 
@@ -167,9 +165,10 @@ Inside the container, these paths are available as:
 
 Once inside the Docker container, you'll have access to the following environment:
 
+- ✅ Ubuntu 22.04
 - ✅ Python environment with necessary packages
 - ✅ PyTorch
-- ✅ CUDA 11.8 Runtime
+- ✅ CUDA 12.4 Runtime
 - ✅ cuDNN
 
 Navigate to your mounted project directory:
@@ -191,7 +190,7 @@ cd /workspace/data
 
 ---
 
-## 🙌 Citation
+## 🔖 Citation
 
 If you found our work useful for your research, please consider citing our papers:
 

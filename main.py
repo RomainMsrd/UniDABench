@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     # ========  Experiments Name ================
     #parser.add_argument('--save_dir',               default='logs/docker_final_repro2/CNN',         type=str, help='Directory containing all experiments')
-    parser.add_argument('--save_dir', default='logs/clean_docker', type=str, help='Directory containing all experiments')
+    parser.add_argument('--save_dir', default='logs/clean', type=str, help='Directory containing all experiments')
 
     parser.add_argument('--exp_name', default='EXP1', type=str, help='experiment name')
     #parser.add_argument('--exp_name',               default='NoParam_SRC2_FNO',         type=str, help='experiment name')

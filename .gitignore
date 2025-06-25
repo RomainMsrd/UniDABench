@@ -12,3 +12,7 @@ trainers/__pycache__/
 models/__pycache__/
 
 dataloader/__pycache__/
+
+logs/
+
+__pycache__/

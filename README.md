@@ -42,7 +42,7 @@ We acknowledge the authors of each baseline method for their valuable contributi
 
 ## 📁 Datasets and Running Experiments
 
-We use three datasets in our experiments. They can be downloaded from the [AdaTime](https://github.com/emadeldeen24/AdaTime) github or directly from the following link:
+We use three datasets in our experiments. They can be downloaded from the [AdaTime](https://github.com/emadeldeen24/AdaTime) GitHub or directly from the following link:
 
 ➡️ [Datasets for UniDABench](https://drive.google.com/file/d/1DcuNYsKyzKg_Vm7u-Lm2Y6BjDdV71QCJ/view?usp=sharing)
 
@@ -98,7 +98,7 @@ Ensure your system meets the following requirements:
 - **NVIDIA GPU**
 - **NVIDIA GPU driver** (version **≥ 515** recommended)
 - **Docker** ([Install Docker](https://docs.docker.com/get-docker/))
-- **NVIDIA Container Toolkit**
+- **NVIDIA Container Toolkit** (see below for installation)
 
 Install the NVIDIA Container Toolkit:
 
@@ -156,7 +156,7 @@ docker run --gpus all -it --rm --shm-size=200g \
 
 #### 🔧 Replace these paths:
 - `$(pwd)`: Automatically mounts the current directory (`UniDABench`) into the container.
-- `/path/to/tmp/dir`: Local directory for temporary files or cache. (you can create `tmp` a folder anywhere)
+- `/path/to/tmp/dir`: Local directory for temporary files or cache. (Tips: You can create a `tmp` folder anywhere)
 
 Inside the container, these paths appear as:
 - `/workspace/data` → Your repository’s root (`UniDABench`)

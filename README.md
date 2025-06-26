@@ -1,5 +1,15 @@
 ## 🔬 Universal Domain Adaptation Benchmark for Time Series (UniDABench)
 
+<p align="center">
+  <a href="https://eusipco2025.org" target="_blank">
+    <img src="https://eusipco2025.org/wp-content/uploads/2024/01/logo.png" alt="EUSIPCO Logo" width="400"/>
+  </a>
+</p>
+
+<p align="center">
+  <strong>📣 Accepted at <a href="https://eusipco2025.org" target="_blank">EUSIPCO 2025</a>, Palermo, Italy!</strong>
+</p>
+
 **UniDABench** is a comprehensive benchmark suite designed for evaluating **Universal Domain Adaptation (UniDA)** methods on **time series data**. Based on and extended from the [AdaTime](https://github.com/emadeldeen24/AdaTime) framework, this repository introduces a unified platform that implements and compares multiple state-of-the-art UDA algorithms across diverse datasets and scenarios.
 
 This github accompanies the paper: 

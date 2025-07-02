@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://eusipco2025.org" target="_blank">
-    <img src="https://eusipco2025.org/wp-content/uploads/2024/01/logo.png" alt="EUSIPCO Logo" width="400"/>
+    <img src="https://github.com/RomainMsrd/UniDABench/blob/main/logo/68747470733a2f2f6575736970636f323032352e6f72672f77702d636f6e74656e742f75706c6f6164732f323032342f30312f6c6f676f2e706e67.png" alt="EUSIPCO Logo" width="400"/>
   </a>
 </p>
 

@@ -208,24 +208,29 @@ cd /workspace/data
 If you found our work useful for your research, please consider citing our papers:
 
 ```bibtex
-@misc{mussard2025universaldomainadaptationbenchmark,
-      title={Universal Domain Adaptation Benchmark for Time Series Data Representation}, 
-      author={Romain Mussard and Fannia Pacheco and Maxime Berar and Gilles Gasso and Paul Honeine},
-      year={2025},
-      eprint={2505.17899},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2505.17899}, 
+@INPROCEEDINGS{11226069,
+  author={Mussard, Romain and Pacheco, Fannia and Berar, Maxime and Gasso, Gilles and Honeine, Paul},
+  booktitle={2025 33rd European Signal Processing Conference (EUSIPCO)}, 
+  title={Universal Domain Adaptation Benchmark for Time Series Data Representation}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1109-1113},
+  keywords={Representation learning;Adaptation models;Protocols;Time series analysis;Computer architecture;Benchmark testing;Feature extraction;Robustness;Data models;Anomaly detection;Universal Domain Adaptation;Time Series;Novelty Detection;Representation Learning},
+  doi={}
 }
+
 ```
 ```bibtex
-@misc{mussard2025deepjointdistributionoptimal,
-      title={Deep Joint Distribution Optimal Transport for Universal Domain Adaptation on Time Series}, 
-      author={Romain Mussard and Fannia Pacheco and Maxime Berar and Gilles Gasso and Paul Honeine},
-      year={2025},
-      eprint={2503.11217},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2503.11217}, 
+@INPROCEEDINGS{11229152,
+  author={Mussard, Romain and Pacheco, Fannia and Berar, Maxime and Gasso, Gilles and Honeine, Paul},
+  booktitle={2025 International Joint Conference on Neural Networks (IJCNN)}, 
+  title={Deep Joint Distribution Optimal Transport for Universal Domain Adaptation on Time Series}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-8},
+  keywords={Measurement;Adaptation models;Uncertainty;Thresholding (Imaging);Time series analysis;Neural networks;Estimation;Deep architecture;Robustness;Data models;Universal Domain Adaptation;Time Series classification;Optimal transport;Auto-thresholding},
+  doi={10.1109/IJCNN64981.2025.11229152}
 }
 ```
